@@ -1,4 +1,6 @@
 -- Creating tables for PH-EmployeeDB
+DROP TABLE dept_emp CASCADE;
+
 CREATE TABLE departments (
      dept_no VARCHAR(4) NOT NULL,
      dept_name VARCHAR(40) NOT NULL,
@@ -37,7 +39,7 @@ CREATE TABLE salaries (
 
 CREATE TABLE dept_emp(
 	emp_no INT NOT NULL,
-	dept_no VARCHAR(4) NOT NULL,
+	dept_no VARCHAR(40) NOT NULL,
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
